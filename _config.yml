@@ -1,0 +1,16 @@
+title: Nyfacade
+description: "Fast pris redesign af din virksomheds hjemmeside. 9.500 kr., 14 dage, du ser den før du betaler."
+lang: da
+baseurl: "/nyfacade"
+url: "https://coffeeio.github.io"
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

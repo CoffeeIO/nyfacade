@@ -1,0 +1,399 @@
+---
+layout: null
+title: "Nyfacade — Din hjemmeside ser ud som i 2012. Jeg laver den om for 9.500 kr."
+description: "Fast pris redesign af din virksomheds hjemmeside. 9.500 kr., 14 dage, du ser den før du betaler."
+---
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F2740">
+{% seo %}
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230F2740%22/><rect x=%228%22 y=%228%22 width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23B0821F%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Nyfacade</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#case" data-da>Før / efter</a>
+      <a href="#case" data-en>Before / after</a>
+      <a href="#saadan" data-da>Sådan foregår det</a>
+      <a href="#saadan" data-en>How it works</a>
+      <a href="#pris" data-da>Pris</a>
+      <a href="#pris" data-en>Price</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Sprog / Language">
+      <button type="button" data-lang-btn="da" aria-pressed="true">DA</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#kontakt" class="btn-cta">
+      <span data-da>Se om du kvalificerer</span><span data-en>Check if you qualify</span>
+    </a>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="hero">
+    <div class="hero-copy" data-da>
+      <div class="eyebrow"><span class="eyebrow-line"></span>Fast pris · 9.500 kr. · 14 dage</div>
+      <h1>Din hjemmeside ser ud som i 2012.<br><span class="gold">Jeg laver den om for 9.500 kr.</span><br>Og du ser den, før du betaler.</h1>
+      <p class="lede">Jeg bygger først et rigtigt udkast til din nye side — dit logo, din tekst, dine billeder. Ikke en skitse, men en side du kan klikke rundt i. Kan du bruge den, går vi live. Kan du ikke, koster det dig ingenting.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Se om din virksomhed kvalificerer</a>
+        <a href="#case" class="btn-secondary">Se et før / efter</a>
+      </div>
+      <p class="fineprint">Ingen møder. Ingen abonnement. Du siger ja eller nej, når du har set den.</p>
+    </div>
+    <div class="hero-copy" data-en>
+      <div class="eyebrow"><span class="eyebrow-line"></span>Fixed price · 9,500 DKK · 14 days</div>
+      <h1>Your website still looks like 2012.<br><span class="gold">I redesign it for 9,500 DKK.</span><br>And you see it before you pay.</h1>
+      <p class="lede">I build a real draft of your new site first — your logo, your text, your photos. Not a sketch: a site you can click through. If you like it, we go live. If you don't, it costs you nothing.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Check if your company qualifies</a>
+        <a href="#case" class="btn-secondary">See a before / after</a>
+      </div>
+      <p class="fineprint">No meetings. No subscription. You say yes or no once you've seen it.</p>
+    </div>
+
+    <div class="compare-wrap">
+      <div class="compare-labels">
+        <span class="lbl-before" data-da>Før</span><span class="lbl-before" data-en>Before</span>
+        <span class="lbl-drag" data-da>Træk for at se forskellen</span><span class="lbl-drag" data-en>Drag to see the difference</span>
+        <span class="lbl-after" data-da>Efter</span><span class="lbl-after" data-en>After</span>
+      </div>
+      <div class="compare" data-compare tabindex="0" role="slider" aria-orientation="horizontal"
+           aria-valuemin="1" aria-valuemax="99" aria-valuenow="50"
+           aria-label="Før / efter sammenligning. Brug piletasterne for at justere.">
+        <div class="mockup-scale" aria-hidden="true">{% include mockup-new.html %}</div>
+        <div class="compare-clip" data-compare-clip aria-hidden="true">
+          <div class="mockup-scale">{% include mockup-old.html %}</div>
+        </div>
+        <div class="compare-handle" data-compare-handle>
+          <div class="compare-handle-grip">&#10096;&#10097;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="case-head" data-da>
+      <div class="copy">
+        <div class="eyebrow">Demonstration · ikke en kundecase</div>
+        <h2>Samme indhold. Nyt design.</h2>
+        <p>Til venstre en typisk dansk virksomhedsside fra omkring 2012. Til højre præcis det samme indhold — samme sider, samme tekst, samme billeder — sat op på ny. Det er den her øvelse, jeg laver på din side. Uden navne på: jeg viser ikke andres sider frem uden at spørge.</p>
+      </div>
+      <dl class="case-stats">
+        <div><dt>Pris</dt><dd>9.500 kr.</dd></div>
+        <div><dt>Leveringstid</dt><dd>14 dage</dd></div>
+        <div><dt>Møder</dt><dd>0</dd></div>
+      </dl>
+    </div>
+    <div class="case-head" data-en>
+      <div class="copy">
+        <div class="eyebrow">Demonstration · not a client case</div>
+        <h2>Same content. New design.</h2>
+        <p>On the left, a typical Danish company site from around 2012. On the right, exactly the same content — same pages, same text, same photos — laid out again. That's the exercise I'll do on your site. No names: I don't put other people's sites on display without asking.</p>
+      </div>
+      <dl class="case-stats">
+        <div><dt>Price</dt><dd>9,500 DKK</dd></div>
+        <div><dt>Delivery</dt><dd>14 days</dd></div>
+        <div><dt>Meetings</dt><dd>0</dd></div>
+      </dl>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span data-da>Før · 2012</span><span data-en>Before · 2012</span></figcaption>
+        <div class="mockup-frame plain" aria-hidden="true"><div class="mockup-scale">{% include mockup-old.html %}</div></div>
+      </figure>
+      <figure>
+        <figcaption class="after">
+          <span data-da>Efter · i dag</span><span data-en>After · today</span>
+        </figcaption>
+        <div class="mockup-frame gold" aria-hidden="true"><div class="mockup-scale">{% include mockup-new.html %}</div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="saadan">
+    <div data-da>
+      <h2 style="max-width:600px">Sådan foregår det</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Jeg bygger en gratis preview</h3>
+          <p>Jeg finder din virksomhed og laver et rigtigt udkast til din nye side. Dit logo, din tekst, dine billeder. Du skal ikke gøre noget.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Du ser den — uden at love noget</h3>
+          <p>Du får et link. Klik rundt i den på telefonen eller computeren. Ingen møde, ingen præsentation, ingen opfølgende opkald.</p>
+        </div>
+        <div class="step dark">
+          <div class="step-num">3</div>
+          <h3>Kan du bruge den, går vi live</h3>
+          <p>9.500 kr., færdig inden for 14 dage. Kan du ikke bruge den, siger du nej tak, og så hører du ikke mere fra mig.</p>
+        </div>
+      </div>
+    </div>
+    <div data-en>
+      <h2 style="max-width:600px">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>I build a free preview</h3>
+          <p>I find your company and build a real draft of your new site. Your logo, your text, your photos. You don't have to do anything.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>You look at it — no strings</h3>
+          <p>You get a link. Click through it on your phone or your computer. No meeting, no presentation, no follow-up calls.</p>
+        </div>
+        <div class="step dark">
+          <div class="step-num">3</div>
+          <h3>If you like it, we go live</h3>
+          <p>9,500 DKK (≈ €1,275), done within 14 days. If you don't like it, you say no thanks and you never hear from me again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pris">
+    <div class="price-card" data-da>
+      <div class="price-grid">
+        <div class="price-main">
+          <div class="price-tag">Fast pris</div>
+          <div class="price-amount"><span class="num">9.500</span><span class="unit">kr.</span></div>
+          <p class="desc">Ekskl. moms. Ingen timepriser, ingen tillæg undervejs. Du betaler først, når siden er live og du er tilfreds.</p>
+          <div class="price-facts">
+            <div><span>Leveringstid</span><span>14 dage</span></div>
+            <div><span>Rettelser</span><span>1 runde inkluderet</span></div>
+            <div><span>Binding</span><span>Ingen</span></div>
+          </div>
+          <a href="#kontakt" class="btn-cta-block">Se om du kvalificerer</a>
+        </div>
+        <div class="price-side">
+          <div class="label">Det er med i prisen</div>
+          <ul class="yes">
+            <li><span>+</span>Samme sider og samme indhold som i dag</li>
+            <li><span>+</span>Nyt visuelt design: farver, skrift, opbygning, billedbehandling</li>
+            <li><span>+</span>Virker ordentligt på mobil og tablet</li>
+            <li><span>+</span>Lagt ind i dit nuværende setup, hvis det kan bære det</li>
+            <li><span>+</span>Levering inden for 14 dage · 1 runde rettelser</li>
+          </ul>
+          <div class="label muted">Det er ikke med</div>
+          <ul class="no">
+            <li><span>–</span>Ny tekst / copywriting</li>
+            <li><span>–</span>Webshop og betalingsløsning</li>
+            <li><span>–</span>Komplekse integrationer: booking, CRM, kundeportal</li>
+            <li><span>–</span>Nyt logo eller visuel identitet fra bunden</li>
+            <li><span>–</span>Løbende vedligeholdelse — kan tilkøbes særskilt</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="price-card" data-en>
+      <div class="price-grid">
+        <div class="price-main">
+          <div class="price-tag">Fixed price</div>
+          <div class="price-amount"><span class="num">9,500</span><span class="unit">DKK</span></div>
+          <p class="price-sub">≈ €1,275 · ex. VAT</p>
+          <p class="desc">No hourly rates, no add-ons along the way. You pay once the site is live and you're happy with it.</p>
+          <div class="price-facts">
+            <div><span>Delivery</span><span>14 days</span></div>
+            <div><span>Revisions</span><span>1 round included</span></div>
+            <div><span>Commitment</span><span>None</span></div>
+          </div>
+          <a href="#kontakt" class="btn-cta-block">Check if you qualify</a>
+        </div>
+        <div class="price-side">
+          <div class="label">Included</div>
+          <ul class="yes">
+            <li><span>+</span>The same pages and the same content you have today</li>
+            <li><span>+</span>New visual design: colour, type, structure, image treatment</li>
+            <li><span>+</span>Works properly on phones and tablets</li>
+            <li><span>+</span>Installed in your current setup, if it can handle it</li>
+            <li><span>+</span>Delivered within 14 days · 1 round of revisions</li>
+          </ul>
+          <div class="label muted">Not included</div>
+          <ul class="no">
+            <li><span>–</span>New text / copywriting</li>
+            <li><span>–</span>Webshop and payments</li>
+            <li><span>–</span>Complex integrations: booking, CRM, customer portals</li>
+            <li><span>–</span>New logo or visual identity from scratch</li>
+            <li><span>–</span>Ongoing maintenance — available separately</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="fit-row" data-da>
+      <div class="fit-copy">
+        <h2>Passer godt til dig hvis…</h2>
+        <p>…du driver et etableret firma med 5-50 ansatte, dine kunder skal kunne se at du er til at regne med — og din side stadig ser ud som i 2012.</p>
+      </div>
+      <ul class="fit-list">
+        <li>Revisor</li>
+        <li>Advokat</li>
+        <li>VVS &amp; håndværk</li>
+        <li>Klinik: tandlæge, fysio, kosmetisk</li>
+        <li>Rådgivende ingeniør</li>
+        <li>B2B-grossist eller producent</li>
+      </ul>
+    </div>
+    <div class="fit-row" data-en>
+      <div class="fit-copy">
+        <h2>This is a good fit if…</h2>
+        <p>…you run an established company with 5-50 employees, your customers need to see that you're dependable — and your site still looks like 2012.</p>
+      </div>
+      <ul class="fit-list">
+        <li>Accountant</li>
+        <li>Law firm</li>
+        <li>Plumbing &amp; trades</li>
+        <li>Clinic: dental, physio, cosmetic</li>
+        <li>Consulting engineer</li>
+        <li>B2B wholesaler or manufacturer</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div data-da>
+      <h2>Det plejer folk at spørge om</h2>
+      <div class="faq-grid">
+        <details>
+          <summary><span class="fq-plus">+</span>Hvad hvis jeg ikke kan bruge previewet?</summary>
+          <p>Så siger du nej tak. Du skylder ingenting, og du har ikke skrevet under på noget. Jeg har lavet previewet på egen risiko — det er hele idéen.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Hvor lang tid tager det?</summary>
+          <p>14 dage fra du siger ja, typisk hurtigere. Previewet har du allerede set — så det meste af arbejdet er gjort, inden vi taler sammen.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Hvad med min nuværende udbyder og mit domæne?</summary>
+          <p>Du beholder begge. Jeg lægger det nye design ind i dit nuværende setup, hvis det kan bære det. Kan det ikke, siger jeg det til dig, inden vi går i gang — ikke bagefter.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Skal jeg selv levere noget?</summary>
+          <p>Ikke for at se previewet. Går vi videre, skal jeg have adgang til din nuværende side, og dit logo i god kvalitet hvis du har det. Det er alt.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Hvorfor er det så billigt?</summary>
+          <p>Fordi omfanget er låst. Jeg skriver ikke ny tekst, holder ikke workshops og bygger ikke fra bunden. Jeg giver de sider, du allerede har, et nyt design. Det kan jeg gøre hurtigt og derfor billigt.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Hvem står bag?</summary>
+          <p>Mathias Grundtvig. Jeg laver arbejdet selv — du taler med den samme person hele vejen. Ring eller skriv: +45 60 63 39 80, grundtvigdk@gmail.com.</p>
+        </details>
+      </div>
+    </div>
+    <div data-en>
+      <h2>What people usually ask</h2>
+      <div class="faq-grid">
+        <details>
+          <summary><span class="fq-plus">+</span>What if I don't like the preview?</summary>
+          <p>Then you say no thanks. You owe nothing and you've signed nothing. I built the preview at my own risk — that's the whole idea.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>How long does it take?</summary>
+          <p>14 days from your yes, usually faster. You've already seen the preview — so most of the work is done before we even talk.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>What about my current provider and domain?</summary>
+          <p>You keep both. I install the new design in your current setup if it can handle it. If it can't, I tell you before we start — not after.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Do I have to provide anything?</summary>
+          <p>Not to see the preview. If we go ahead, I need access to your current site and your logo in decent quality if you have it. That's all.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Why is it so cheap?</summary>
+          <p>Because the scope is locked. I don't write new text, run workshops or build from scratch. I give the pages you already have a new design. That I can do fast, and therefore cheaply.</p>
+        </details>
+        <details>
+          <summary><span class="fq-plus">+</span>Who's behind this?</summary>
+          <p>Mathias Grundtvig. I do the work myself — you deal with the same person all the way. Call or write: +45 60 63 39 80, grundtvigdk@gmail.com.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="contact-card">
+      <div data-da>
+        <div class="contact-tag">Uforpligtende</div>
+        <h2>Se om din virksomhed kvalificerer</h2>
+        <p>Skriv din nuværende hjemmeside og din e-mail. Jeg kigger på siden, og hvis jeg mener jeg kan gøre den markant bedre, bygger jeg previewet og sender dig et link. Ellers får du en kort besked om det.</p>
+        <p class="contact-signature">Mathias Grundtvig · +45 60 63 39 80 · grundtvigdk@gmail.com</p>
+      </div>
+      <div data-en>
+        <div class="contact-tag">No obligation</div>
+        <h2>Check if your company qualifies</h2>
+        <p>Enter your current website and your email. I'll look at it, and if I think I can make it significantly better, I'll build the preview and send you a link. If not, you'll get a short note saying so.</p>
+        <p class="contact-signature">Mathias Grundtvig · +45 60 63 39 80 · grundtvigdk@gmail.com</p>
+      </div>
+
+      <div class="contact-form-box">
+        <!-- Replace YOUR_FORM_ID with your Formspree endpoint ID (https://formspree.io) -->
+        <form class="contact-form" data-contact-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label><span data-da>Din nuværende hjemmeside</span><span data-en>Your current website</span>
+            <input type="text" name="website" placeholder="www.ditfirma.dk" required>
+          </label>
+          <label><span data-da>Din e-mail</span><span data-en>Your email</span>
+            <input type="email" name="email" placeholder="dig@ditfirma.dk" required>
+          </label>
+          <button type="submit">
+            <span data-da>Send — så kigger jeg på den</span><span data-en>Send — I'll take a look</span>
+          </button>
+          <p class="fine">
+            <span data-da>Jeg bruger kun din e-mail til at sende dig previewet. Ingen nyhedsbrev.</span>
+            <span data-en>I only use your email to send you the preview. No newsletter.</span>
+          </p>
+          <p class="error">
+            <span data-da>Noget gik galt. Prøv igen, eller skriv direkte til grundtvigdk@gmail.com.</span>
+            <span data-en>Something went wrong. Try again, or email grundtvigdk@gmail.com directly.</span>
+          </p>
+        </form>
+        <div class="thanks" data-contact-thanks>
+          <div class="thanks-check">&#10003;</div>
+          <div class="thanks-title"><span data-da>Tak — jeg har modtaget den.</span><span data-en>Thanks — got it.</span></div>
+          <p>
+            <span data-da>Jeg kigger på din side inden for et par dage. Kan jeg gøre den markant bedre, bygger jeg previewet og sender dig et link.</span>
+            <span data-en>I'll look at your site within a couple of days. If I can make it significantly better, I'll build the preview and send you a link.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="footer-dot"></span>
+      <strong>Nyfacade</strong>
+      <span>· Mathias Grundtvig</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:grundtvigdk@gmail.com">grundtvigdk@gmail.com</a>
+      <a href="tel:+4560633980">+45 60 63 39 80</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

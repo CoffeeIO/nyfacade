@@ -1,0 +1,62 @@
+---
+layout: null
+permalink: /404.html
+title: "Siden findes ikke — Nyfacade"
+description: "Siden findes ikke."
+---
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F2740">
+<meta name="robots" content="noindex">
+<title>{{ page.title }}</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230F2740%22/><rect x=%228%22 y=%228%22 width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23B0821F%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<style>
+.notfound{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(64px,12vw,140px) 0}
+.notfound .code{font-family:'Instrument Sans',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#B0821F;margin-bottom:16px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="{{ '/' | relative_url }}" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Nyfacade</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="notfound">
+    <div class="code">404</div>
+    <h1>Den side kunne vi ikke finde.</h1>
+    <p class="lede" style="font-size:17px;line-height:1.55;color:#4d6274;margin:16px 0 0;max-width:520px">Linket er enten forkert, eller siden er flyttet. Prøv forsiden i stedet.</p>
+    <div class="hero-actions">
+      <a href="{{ '/' | relative_url }}" class="btn-primary">Til forsiden</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="footer-dot"></span>
+      <strong>Nyfacade</strong>
+      <span>· Mathias Grundtvig</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:grundtvigdk@gmail.com">grundtvigdk@gmail.com</a>
+      <a href="tel:+4560633980">+45 60 63 39 80</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
