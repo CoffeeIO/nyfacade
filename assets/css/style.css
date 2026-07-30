@@ -142,7 +142,7 @@ h2{margin:0;font-size:clamp(27px,4.2vw,42px);line-height:1.1;font-weight:600;let
 /* about me */
 .about-card{background:#fff;border:1px solid #EAE4DA;border-radius:16px;padding:clamp(26px,4vw,44px);display:flex;flex-wrap:wrap;gap:clamp(26px,4vw,52px);align-items:flex-start}
 .about-side{flex:0 1 250px;min-width:210px;display:flex;flex-direction:column;gap:16px}
-.about-photo{border:1px dashed #DED7CA;border-radius:12px;background:repeating-linear-gradient(135deg,#F7F4ED 0 8px,#F2EEE5 8px 16px);aspect-ratio:4/5;width:100%;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#9c9484;text-align:center;line-height:1.6}
+.about-photo{border:1px solid #EAE4DA;border-radius:12px;aspect-ratio:4/5;width:100%;object-fit:cover;display:block}
 .about-facts{margin:0;font-size:14px}
 .about-facts dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#8b8577;margin-top:11px}
 .about-facts dt:first-child{margin-top:0}
