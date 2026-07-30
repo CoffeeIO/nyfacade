@@ -1,8 +1,8 @@
 title: Nyfacade
 description: "Fast pris redesign af din virksomheds hjemmeside. 10.000 kr., 14 dage, du ser den før du betaler."
 lang: da
-baseurl: "/nyfacade"
-url: "https://coffeeio.github.io"
+baseurl: ""
+url: "https://nyfacade.dk"
 
 markdown: kramdown
 plugins:
