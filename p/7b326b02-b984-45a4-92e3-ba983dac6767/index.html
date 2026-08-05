@@ -1,0 +1,261 @@
+---
+layout: null
+title: "Trekroner Revision — sådan kunne jeres nye hjemmeside se ud"
+---
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F2740">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ page.title }}</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230F2740%22/><rect x=%228%22 y=%228%22 width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23B0821F%22/></svg>">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<style>
+  .preview-header{border-bottom:1px solid #EAE4DA;padding:18px 0}
+  .preview-header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .preview-tag{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#8b8577}
+  section:first-of-type{padding-top:clamp(48px,7vw,80px)}
+  .case-head{border-top:none;padding-top:0}
+  section + section .case-head{border-top:1px solid #EAE4DA;padding-top:26px}
+</style>
+</head>
+<body>
+
+<header class="preview-header">
+  <div class="wrap">
+    <a href="https://nyfacade.dk" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Nyfacade</span>
+    </a>
+    <span class="preview-tag">Privat preview &middot; ikke indekseret</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="hero-copy" style="max-width:760px">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Til Trekroner Revision A/S</div>
+      <h1>Samme indhold. <span class="gold">Nyt design.</span></h1>
+      <p class="lede">Jeg har taget jeres tre vigtigste sider — Forside, Om os og Kontakt os — og bygget dem om. Samme tekst, samme adresse, samme telefon. Kun det visuelle er nyt: farver, typografi, opbygning og en menu der faktisk virker på mobilen. Træk ikke i noget her, det er screenshots — men det er den øvelse, jeres rigtige side får, hvis I siger ja.</p>
+    </div>
+  </section>
+
+  <section id="forside">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 1 af 3</div>
+        <h2>Forside</h2>
+        <p>Logoboksen, det ensomme foto med stort ord-overlay, og sidebar-menuen skiftes ud med en luftig topsektion og en menu, der er let at overskue.</p>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før · som den er i dag</span></figcaption>
+        <div class="mockup-frame plain"><div class="mockup-scale">
+          {% capture forside_before_body %}
+          <p style="margin:0 0 12px;line-height:1.6;color:#000">Her finder du information om os, herunder lidt historie, telefon- og emaillister, produktbeskrivelser, jobopslag med videre.</p>
+          <div style="border:1px solid #D5DAEB;background:#F7F8FC;padding:10px 12px;font-size:11px;line-height:1.7">
+            Trekroner Revision A/S &middot; Godkendte Revisorer<br>
+            Universitetsparken 2, 4000 Roskilde<br>
+            Telefon 46 36 11 99 &middot; <span style="color:#00309C;text-decoration:underline">info@trekronerrevision.dk</span><br>
+            CVR-nr. 28 99 13 55
+          </div>
+          {% endcapture %}
+          {% include trekroner/before.html active="Forside" heading="Forside" caption_word="Fleksibilitet" caption_sentence="vi samarbejder bredt" body=forside_before_body %}
+        </div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="mockup-frame gold"><div class="mockup-scale">
+          {% capture forside_after_body %}
+          <p style="margin:0;font:400 13.5px/1.6 'Inter',system-ui,sans-serif;color:#1A1A1A;max-width:56ch">Her finder du information om os, herunder lidt historie, <a href="#" style="color:#14328C;text-decoration:underline;text-decoration-color:#C9A227">telefon- og emaillister</a>, produktbeskrivelser, jobopslag med videre.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:190px;background:#F5F6FA;border:1px solid #E1E4EC;border-radius:8px;padding:14px">
+              <span style="font:600 9.5px/1.2 'Inter',system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5B5F6B">Adresse</span>
+              <p style="margin:6px 0 0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:#1A1A1A">Trekroner Revision A/S<br>Universitetsparken 2<br>4000 Roskilde</p>
+            </div>
+            <div style="flex:1;min-width:190px;background:#F5F6FA;border:1px solid #E1E4EC;border-radius:8px;padding:14px">
+              <span style="font:600 9.5px/1.2 'Inter',system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5B5F6B">Kontakt</span>
+              <p style="margin:6px 0 0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:#1A1A1A">46 36 11 99<br>info@trekronerrevision.dk</p>
+            </div>
+          </div>
+          {% endcapture %}
+          {% include trekroner/after.html active="Forside" heading="Forside" caption_word="Fleksibilitet" caption_sentence="vi samarbejder bredt" body=forside_after_body %}
+        </div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="om-os">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 2 af 3</div>
+        <h2>Om os</h2>
+        <p>Samme historie, samme kundefortælling, samme åbningstider — sat op med en tydelig typografisk hierarki i stedet for ensartet, fed brødtekst.</p>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før · som den er i dag</span></figcaption>
+        <div class="mockup-frame plain"><div class="mockup-scale">
+          {% capture omos_before_body %}
+          <p style="margin:0 0 5px;font-weight:700;font-size:11px">Historie</p>
+          <p style="margin:0 0 10px;line-height:1.55;color:#000">Firmaet blev grundlagt den 1. september 1983 og har s&aring;ledes serviceret kunder i mere end 30 &aring;r. Vi besk&aelig;ftiger i dag ca. 26 medarbejdere, heraf ca. 22 revisorer.</p>
+          <p style="margin:0 0 5px;font-weight:700;font-size:11px">Kunder</p>
+          <p style="margin:0 0 10px;line-height:1.55;color:#000">Vi servicerer advokater, l&aelig;ger, tandl&aelig;ger, IT-konsulenter, engros- og handelsvirksomheder samt den sociale sektor.</p>
+          <p style="margin:0 0 5px;font-weight:700;font-size:11px">&Aring;bningstider</p>
+          <p style="margin:0;line-height:1.55;color:#000">Mandag-fredag 9.00-16.00 (til kl. 15.00 i sommerperioden).</p>
+          {% endcapture %}
+          {% include trekroner/before.html active="Om os" heading="Om os" caption_word="Positivitet" caption_sentence="godt humør og arbejdsglæde" body=omos_before_body %}
+        </div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="mockup-frame gold"><div class="mockup-scale">
+          {% capture omos_after_body %}
+          <div style="display:flex;flex-direction:column;gap:14px;max-width:60ch">
+            <div>
+              <h2 style="margin:0 0 5px;font:600 14.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">Historie</h2>
+              <p style="margin:0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:#1A1A1A">Firmaet blev grundlagt den 1. september 1983 og har s&aring;ledes serviceret kunder i mere end 30 &aring;r. Vi besk&aelig;ftiger i dag ca. 26 medarbejdere, heraf ca. 22 revisorer.</p>
+            </div>
+            <div>
+              <h2 style="margin:0 0 5px;font:600 14.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">Kunder</h2>
+              <p style="margin:0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:#1A1A1A">Vi servicerer advokater, l&aelig;ger, tandl&aelig;ger, IT-konsulenter, engros- og handelsvirksomheder samt den sociale sektor.</p>
+            </div>
+            <div>
+              <h2 style="margin:0 0 5px;font:600 14.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">&Aring;bningstider</h2>
+              <div style="background:#F5F6FA;border:1px solid #E1E4EC;border-radius:8px;padding:12px 14px">
+                <p style="margin:0;font:400 13px/1.6 'Inter',system-ui,sans-serif;color:#1A1A1A">Mandag-fredag 9.00-16.00 (til kl. 15.00 i sommerperioden).</p>
+              </div>
+            </div>
+          </div>
+          {% endcapture %}
+          {% include trekroner/after.html active="Om os" heading="Om os" caption_word="Positivitet" caption_sentence="godt humør og arbejdsglæde" body=omos_after_body %}
+        </div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="kontakt-os">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 3 af 3</div>
+        <h2>Kontakt os</h2>
+        <p>Formularen får labels, luft og en tydelig knap — i stedet for rå, ustylede felter.</p>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før · som den er i dag</span></figcaption>
+        <div class="mockup-frame plain"><div class="mockup-scale">
+          {% capture kontakt_before_body %}
+          <table style="border-collapse:collapse;font-size:11px;color:#000">
+            <tr><td style="padding:3px 8px 3px 0">Navn:</td><td><input type="text" style="width:190px;font-size:11px"></td></tr>
+            <tr><td style="padding:3px 8px 3px 0">Adresse:</td><td><input type="text" style="width:190px;font-size:11px"></td></tr>
+            <tr><td style="padding:3px 8px 3px 0">Telefon:</td><td><input type="text" style="width:190px;font-size:11px"></td></tr>
+            <tr><td style="padding:3px 8px 3px 0">Email:</td><td><input type="text" style="width:190px;font-size:11px"></td></tr>
+            <tr><td style="padding:3px 8px 3px 0;vertical-align:top">Besked:</td><td><textarea rows="3" style="width:190px;font-size:11px"></textarea></td></tr>
+          </table>
+          <div style="margin-top:8px"><input type="submit" value="Send" style="font-size:11px"></div>
+          {% endcapture %}
+          {% include trekroner/before.html active="Kontakt os" heading="Kontakt os" caption_word="Fleksibilitet" caption_sentence="hensyn til kunder og medarbejdere" body=kontakt_before_body %}
+        </div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="mockup-frame gold"><div class="mockup-scale">
+          {% capture kontakt_after_body %}
+          <form style="display:flex;flex-direction:column;gap:10px;max-width:420px">
+            <div style="display:flex;gap:10px">
+              <label style="flex:1;display:flex;flex-direction:column;gap:4px"><span style="font:500 11.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">Navn</span><input style="font:400 12.5px 'Inter',system-ui,sans-serif;border:1px solid #E1E4EC;border-radius:7px;padding:8px 10px"></label>
+              <label style="flex:1;display:flex;flex-direction:column;gap:4px"><span style="font:500 11.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">Telefon</span><input style="font:400 12.5px 'Inter',system-ui,sans-serif;border:1px solid #E1E4EC;border-radius:7px;padding:8px 10px"></label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:4px"><span style="font:500 11.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">Emailadresse</span><input style="font:400 12.5px 'Inter',system-ui,sans-serif;border:1px solid #E1E4EC;border-radius:7px;padding:8px 10px"></label>
+            <label style="display:flex;flex-direction:column;gap:4px"><span style="font:500 11.5px/1.3 'Inter',system-ui,sans-serif;color:#1A1A1A">Besked</span><span style="border:1px solid #E1E4EC;border-radius:7px;height:38px;background:#fff"></span></label>
+            <div style="display:flex;align-items:center;gap:14px;padding-top:2px">
+              <span style="font:600 12.5px/1 'Inter',system-ui,sans-serif;color:#fff;background:#14328C;border-radius:8px;padding:10px 18px">Send besked</span>
+              <span style="font:400 12px/1.5 'Inter',system-ui,sans-serif;color:#5B5F6B">Eller ring p&aring; 46 36 11 99</span>
+            </div>
+          </form>
+          {% endcapture %}
+          {% include trekroner/after.html active="Kontakt os" heading="Kontakt os" caption_word="Fleksibilitet" caption_sentence="hensyn til kunder og medarbejdere" body=kontakt_after_body %}
+        </div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="mobil">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Og det, der faktisk betyder mest</div>
+        <h2>På mobilen er den i dag ikke bare grim — den er i stykker.</h2>
+        <p>Jeres nuværende side er bygget til en fast skrivebordsbredde. På telefonen bliver den ikke lagt om, den bliver bare klemt sammen: menuen fylder det halve skærmbillede, og adressen i toppen bliver skåret af. Den nye version er bygget til telefonen først — én kolonne, en fane-menu du kan skubbe til siden, og en "Login BusinessPoint"-knap du rent faktisk kan ramme med en tommelfinger.</p>
+      </div>
+    </div>
+    <div class="case-row mobile">
+      <figure>
+        <figcaption class="before"><span>Før · på telefonen</span></figcaption>
+        <div class="mockup-frame plain phone" data-scale-base="390"><div class="mockup-scale">
+          {% include trekroner/before.html width=390 height=760 active="Forside" heading="Forside" caption_word="Fleksibilitet" caption_sentence="vi samarbejder bredt" body=forside_before_body %}
+        </div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter · på telefonen</span></figcaption>
+        <div class="mockup-frame gold phone" data-scale-base="390"><div class="mockup-scale">
+          {% include trekroner/after-mobile.html active="Forside" heading="Forside" caption_word="Fleksibilitet" caption_sentence="vi samarbejder bredt" body=forside_after_body %}
+        </div></div>
+      </figure>
+    </div>
+    <div class="case-row mobile" style="margin-top:28px">
+      <figure>
+        <figcaption class="before"><span>Før · på telefonen</span></figcaption>
+        <div class="mockup-frame plain phone" data-scale-base="390"><div class="mockup-scale">
+          {% include trekroner/before.html width=390 height=760 active="Kontakt os" heading="Kontakt os" caption_word="Fleksibilitet" caption_sentence="hensyn til kunder og medarbejdere" body=kontakt_before_body %}
+        </div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter · på telefonen</span></figcaption>
+        <div class="mockup-frame gold phone" data-scale-base="390"><div class="mockup-scale">
+          {% include trekroner/after-mobile.html active="Kontakt os" heading="Kontakt os" caption_word="Fleksibilitet" caption_sentence="hensyn til kunder og medarbejdere" body=kontakt_after_body %}
+        </div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact-card">
+      <div>
+        <div class="contact-tag">Uforpligtende</div>
+        <h2>Kan I bruge den?</h2>
+        <p>Så går vi live: 10.000 kr., 14 dage, lagt ind i jeres nuværende setup. Kan I ikke, koster det ingenting — skriv bare nej tak.</p>
+        <p class="contact-signature">Mathias Grundtvig · +45 42 91 58 99 · mathias@nyfacade.dk</p>
+      </div>
+      <div class="contact-form-box" style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+        <a href="mailto:mathias@nyfacade.dk?subject=Trekroner%20Revision%20%E2%80%94%20ja%20tak" class="btn-cta-block" style="display:block;text-align:center;background:#0F2740;color:#fff;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ja, det vil vi gerne se mere af</a>
+        <a href="tel:+4542915899" style="display:block;text-align:center;border:1px solid #DED7CA;color:#0F2740;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ring i stedet: 42 91 58 99</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="footer-dot"></span>
+      <strong>Nyfacade</strong>
+      <span>· Mathias Grundtvig</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:mathias@nyfacade.dk">mathias@nyfacade.dk</a>
+      <a href="tel:+4542915899">+45 42 91 58 99</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
