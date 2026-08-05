@@ -37,8 +37,7 @@
   });
 
   function applyScale(frameEl) {
-    var base = parseFloat(frameEl.getAttribute("data-scale-base")) || 960;
-    var scale = frameEl.clientWidth / base;
+    var scale = frameEl.clientWidth / 960;
     scaleTargets.forEach(function (t) {
       if (t.frame === frameEl) t.scaled.style.transform = "scale(" + scale + ")";
     });
