@@ -30,14 +30,27 @@ title: "Trekroner Revision — sådan kunne jeres nye hjemmeside se ud"
   .shot-frame.gold{border:1px solid #DCC79A;box-shadow:0 18px 44px -18px rgba(176,130,31,.42)}
   .shot-frame img{display:block;width:100%;height:auto}
 
-  .iphone-frame{position:relative;width:100%;max-width:260px;margin:0 auto;background:#111;border-radius:44px;padding:12px}
-  .iphone-frame.plain{box-shadow:0 16px 36px -18px rgba(15,39,64,.35)}
-  .iphone-frame.gold{box-shadow:0 20px 44px -18px rgba(176,130,31,.5)}
-  .iphone-frame::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:72px;height:8px;background:#111;border-radius:4px;z-index:2}
-  .iphone-frame .screen{position:relative;aspect-ratio:390/844;border-radius:32px;overflow-y:auto;overflow-x:hidden;background:#fff;-webkit-overflow-scrolling:touch}
+  /* realistic iPhone frame — notch, speaker, camera, home indicator
+     (technique adapted from the "Pure CSS iPhone X Mockup" by Adiel Hercules,
+     https://codepen.io/adielhercules/pen/dJJGBQ — fixed px converted to % so it
+     stays responsive at any card width) */
+  .iphone-frame{position:relative;width:100%;max-width:250px;margin:0 auto}
+  .iphone-frame__body{position:relative;width:100%;aspect-ratio:360/780;border-radius:11.1% / 5.1%;
+    background:#0c0c0e;
+    box-shadow:0 0 0 2.2% #1f1f1f, 0 0 0 2.5% #191919, 0 0 0 3.9% #111,
+      0 20px 44px -18px rgba(15,39,64,.4);}
+  .iphone-frame.gold .iphone-frame__body{
+    box-shadow:0 0 0 2.2% #1f1f1f, 0 0 0 2.5% #191919, 0 0 0 3.9% #111,
+      0 22px 48px -18px rgba(176,130,31,.45);}
+  .iphone-frame__notch{position:absolute;z-index:4;top:0;left:50%;transform:translateX(-50%);width:56%;height:3.85%;background:#1f1f1f;border-radius:0 0 16px 16px}
+  .iphone-frame__speaker{position:absolute;z-index:5;top:1.3%;left:50%;transform:translateX(-50%);width:15%;height:.8%;min-height:4px;background:#101010;border-radius:8px;box-shadow:inset 0 -2px 2px rgba(255,255,255,.15)}
+  .iphone-frame__camera{position:absolute;z-index:5;top:1.05%;left:59%;width:2.4%;height:1.15%;min-width:8px;min-height:8px;background:#101010;border-radius:50%;box-shadow:inset 0 -1px 1px rgba(255,255,255,.15)}
+  .iphone-frame__camera::after{content:"";position:absolute;inset:28%;background:#2d4d76;border-radius:50%}
+  .iphone-frame .screen{position:absolute;top:4.6%;left:0;right:0;bottom:0;border-radius:0 0 11.1% 11.1% / 0 0 5.1% 5.1%;overflow-y:auto;overflow-x:hidden;background:#fff;-webkit-overflow-scrolling:touch;z-index:1}
   .iphone-frame .screen img{display:block;width:100%;height:auto}
-  .iphone-frame .screen::-webkit-scrollbar{width:4px}
+  .iphone-frame .screen::-webkit-scrollbar{width:3px}
   .iphone-frame .screen::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:2px}
+  .iphone-frame__home-bar{position:absolute;z-index:5;left:50%;bottom:.9%;transform:translateX(-50%);width:36%;height:4px;background:#fff;border-radius:10px;mix-blend-mode:difference}
 </style>
 </head>
 <body>
@@ -91,7 +104,7 @@ title: "Trekroner Revision — sådan kunne jeres nye hjemmeside se ud"
             </div>
           </div>
           {% endcapture %}
-          {% include trekroner/after.html active="Forside" heading="Forside" caption_word="Fleksibilitet" caption_sentence="vi samarbejder bredt" body=forside_after_body %}
+          {% include trekroner/after.html active="Forside" heading="Forside" caption_word="Fleksibilitet" caption_sentence="vi samarbejder bredt" hero="hero-forside.jpg" body=forside_after_body %}
         </div></div>
       </figure>
     </div>
@@ -131,7 +144,7 @@ title: "Trekroner Revision — sådan kunne jeres nye hjemmeside se ud"
             </div>
           </div>
           {% endcapture %}
-          {% include trekroner/after.html active="Om os" heading="Om os" caption_word="Positivitet" caption_sentence="godt humør og arbejdsglæde" body=omos_after_body %}
+          {% include trekroner/after.html active="Om os" heading="Om os" caption_word="Positivitet" caption_sentence="godt humør og arbejdsglæde" hero="hero-omos.jpg" body=omos_after_body %}
         </div></div>
       </figure>
     </div>
@@ -167,7 +180,7 @@ title: "Trekroner Revision — sådan kunne jeres nye hjemmeside se ud"
             </div>
           </form>
           {% endcapture %}
-          {% include trekroner/after.html active="Kontakt os" heading="Kontakt os" caption_word="Fleksibilitet" caption_sentence="hensyn til kunder og medarbejdere" body=kontakt_after_body %}
+          {% include trekroner/after.html active="Kontakt os" heading="Kontakt os" caption_word="Fleksibilitet" caption_sentence="hensyn til kunder og medarbejdere" hero="hero-kontakt.jpg" body=kontakt_after_body %}
         </div></div>
       </figure>
     </div>
@@ -184,29 +197,77 @@ title: "Trekroner Revision — sådan kunne jeres nye hjemmeside se ud"
     <div class="shot-row">
       <figure>
         <figcaption class="before"><span>Før · Forside</span></figcaption>
-        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/trekroner/before-forside-mobile.png' | relative_url }}" alt="Trekroner Revisions forside i dag, set på mobil" loading="lazy"></div></div>
+        <div class="iphone-frame plain">
+          <div class="iphone-frame__body">
+            <div class="iphone-frame__notch"></div>
+            <div class="iphone-frame__speaker"></div>
+            <div class="iphone-frame__camera"></div>
+            <div class="screen"><img src="{{ '/assets/img/trekroner/before-forside-mobile.png' | relative_url }}" alt="Trekroner Revisions forside i dag, set på mobil" loading="lazy"></div>
+            <div class="iphone-frame__home-bar"></div>
+          </div>
+        </div>
       </figure>
       <figure>
         <figcaption class="before"><span>Før · Om os</span></figcaption>
-        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/trekroner/before-omos-mobile.png' | relative_url }}" alt="Trekroner Revisions Om os-side i dag, set på mobil" loading="lazy"></div></div>
+        <div class="iphone-frame plain">
+          <div class="iphone-frame__body">
+            <div class="iphone-frame__notch"></div>
+            <div class="iphone-frame__speaker"></div>
+            <div class="iphone-frame__camera"></div>
+            <div class="screen"><img src="{{ '/assets/img/trekroner/before-omos-mobile.png' | relative_url }}" alt="Trekroner Revisions Om os-side i dag, set på mobil" loading="lazy"></div>
+            <div class="iphone-frame__home-bar"></div>
+          </div>
+        </div>
       </figure>
       <figure>
         <figcaption class="before"><span>Før · Kontakt os</span></figcaption>
-        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/trekroner/before-kontakt-mobile.png' | relative_url }}" alt="Trekroner Revisions Kontakt os-side i dag, set på mobil" loading="lazy"></div></div>
+        <div class="iphone-frame plain">
+          <div class="iphone-frame__body">
+            <div class="iphone-frame__notch"></div>
+            <div class="iphone-frame__speaker"></div>
+            <div class="iphone-frame__camera"></div>
+            <div class="screen"><img src="{{ '/assets/img/trekroner/before-kontakt-mobile.png' | relative_url }}" alt="Trekroner Revisions Kontakt os-side i dag, set på mobil" loading="lazy"></div>
+            <div class="iphone-frame__home-bar"></div>
+          </div>
+        </div>
       </figure>
     </div>
     <div class="shot-row" style="margin-top:32px">
       <figure>
         <figcaption class="after"><span>Efter · Forside</span></figcaption>
-        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/trekroner/after-forside-mobile.png' | relative_url }}" alt="Forside i det nye design, set på mobil" loading="lazy"></div></div>
+        <div class="iphone-frame gold">
+          <div class="iphone-frame__body">
+            <div class="iphone-frame__notch"></div>
+            <div class="iphone-frame__speaker"></div>
+            <div class="iphone-frame__camera"></div>
+            <div class="screen"><img src="{{ '/assets/img/trekroner/after-forside-mobile.png' | relative_url }}" alt="Forside i det nye design, set på mobil" loading="lazy"></div>
+            <div class="iphone-frame__home-bar"></div>
+          </div>
+        </div>
       </figure>
       <figure>
         <figcaption class="after"><span>Efter · Om os</span></figcaption>
-        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/trekroner/after-omos-mobile.png' | relative_url }}" alt="Om os i det nye design, set på mobil" loading="lazy"></div></div>
+        <div class="iphone-frame gold">
+          <div class="iphone-frame__body">
+            <div class="iphone-frame__notch"></div>
+            <div class="iphone-frame__speaker"></div>
+            <div class="iphone-frame__camera"></div>
+            <div class="screen"><img src="{{ '/assets/img/trekroner/after-omos-mobile.png' | relative_url }}" alt="Om os i det nye design, set på mobil" loading="lazy"></div>
+            <div class="iphone-frame__home-bar"></div>
+          </div>
+        </div>
       </figure>
       <figure>
         <figcaption class="after"><span>Efter · Kontakt os</span></figcaption>
-        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/trekroner/after-kontakt-mobile.png' | relative_url }}" alt="Kontakt os i det nye design, set på mobil" loading="lazy"></div></div>
+        <div class="iphone-frame gold">
+          <div class="iphone-frame__body">
+            <div class="iphone-frame__notch"></div>
+            <div class="iphone-frame__speaker"></div>
+            <div class="iphone-frame__camera"></div>
+            <div class="screen"><img src="{{ '/assets/img/trekroner/after-kontakt-mobile.png' | relative_url }}" alt="Kontakt os i det nye design, set på mobil" loading="lazy"></div>
+            <div class="iphone-frame__home-bar"></div>
+          </div>
+        </div>
       </figure>
     </div>
   </section>
