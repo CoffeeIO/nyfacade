@@ -90,11 +90,36 @@ dashed "foto af teamet" gradient div.
    you touched shared `assets/css/style.css` or `assets/js/main.js` — confirm the existing
    compare-slider still works before considering the change safe.
 
-7. **Only commit/push when explicitly asked.** Use a descriptive commit message naming the lead
-   and what the page shows; never mention the lead's name in a way that would leak if the commit
-   message itself were public (it will be, on GitHub) — company names are fine (the redesign is
-   for them), but don't editorialize about their site being bad in the commit message itself.
+7. **Commit and push once step 6 verifies.** This is the last step of the build — don't stop and
+   ask. Only hold off if the build failed, images are broken, or the user said not to.
+
+   ```bash
+   cd /Users/mga/projects/nyfacade
+   git add assets/img/<company-slug>/ p/<slug>-<uuid>/
+   git commit -m "Add case page for <Company>"
+   git push
+   ```
+
+   **Optimise the images before the first commit, not after.** Git keeps every blob forever, so a
+   fat first commit is permanent even if you shrink the files later. Retina PNG crops run large
+   (a single full-page desktop "after" can top 1 MB); convert the `after-*` crops to JPEG at
+   q85-90 and keep the whole `assets/img/<slug>/` folder under roughly 2 MB:
+   ```bash
+   sips -s format jpeg -s formatOptions 88 after-omos-desktop.png --out after-omos-desktop.jpg
+   ```
+   Update the `<img src>` references to match, then rebuild (step 6) before committing — a
+   rename that misses a reference gives the lead a page full of broken images.
+
+   **Pushing publishes.** nyfacade.dk is live on GitHub Pages, so the page is publicly reachable
+   the moment the push lands. That's the point — it's the link you send the lead — but it means
+   the `noindex, nofollow` tag from step 1 must actually be in the built output, and the page must
+   still be unlinked from the site nav. Verify both in `/tmp/nyfacade-build/` before pushing.
+
+   Commit messages are public on GitHub. Name the company plainly (the redesign is for them, so
+   that's fine) but never editorialize about their current site being bad, and never paste the
+   lead's private contact details into the message.
 
 ## Report back
-The page's live path (`/p/<uuid>/`), which sections got real vs hand-written content, and
-confirmation the homepage wasn't regressed if shared files changed.
+The page's live path (`/p/<uuid>/`), which sections got real vs hand-written content,
+confirmation the homepage wasn't regressed if shared files changed, and the commit/push result
+(or why it was held back).
