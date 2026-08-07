@@ -37,10 +37,19 @@ dashed "foto af teamet" gradient div.
    mkdir -p p/<uuid>
    ```
    Jekyll auto-publishes `p/<uuid>/index.html` at `/p/<uuid>/` — no permalink config needed.
-   Front matter: `layout: null`, a real `<title>`, and `<meta name="robots" content="noindex,
-   nofollow">`. No link to this page from anywhere else on the site — the user shares the URL
-   directly. Do not ask "should I link it from the homepage" — the answer is always no unless
-   explicitly told otherwise.
+   Front matter: `layout: null`, **`sitemap: false`**, a real `<title>`, and `<meta name="robots"
+   content="noindex, nofollow">`. No link to this page from anywhere else on the site — the user
+   shares the URL directly. Do not ask "should I link it from the homepage" — the answer is
+   always no unless explicitly told otherwise.
+
+   **`sitemap: false` is not optional.** This repo runs `jekyll-sitemap`, which otherwise lists
+   every page — so the "private" client link gets published in `sitemap.xml` for anyone to read.
+   `noindex` does not save you: it asks crawlers not to *index* the page, while the sitemap is
+   busy *advertising the URL*. Both preview pages leaked this way before it was caught. Verify in
+   the built output, not just the source:
+   ```bash
+   grep -oE '<loc>[^<]+</loc>' /tmp/nyfacade-build/sitemap.xml   # must be the homepage only
+   ```
 
 2. **Gather real assets** (see `capture-screenshots` skill):
    - Before: desktop + mobile screenshots of the lead's actual live site (2-3 key pages).
