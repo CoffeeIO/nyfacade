@@ -31,6 +31,30 @@ alone does not reproduce how a real phone renders a non-responsive site. Use pla
 quick visual QA of a page you've already built (see `build-case-page` skill), not for capturing
 source screenshots.
 
+## Stripping cookie banners — never delete `<body>`
+
+Whatever tool you capture with, the obvious selector is a trap. WordPress's Cookie Notice plugin
+puts `cookies-not-set` on the body class, so `[class*=cookie]` matches BODY; removing it deletes
+the whole page and you capture a blank white rectangle that still looks like a successful
+screenshot. Two clients were shot blank this way before it was diagnosed. Always exclude
+body/html, and check the page still has text before you capture:
+
+```js
+await page.evaluate(() => {
+  document.querySelectorAll('[id*=cookie],[class*=cookie],[id*=consent],[class*=consent]').forEach(e => {
+    if (e === document.body || e === document.documentElement) return;
+    if (e.tagName === 'SCRIPT' || e.tagName === 'LINK') return;
+    e.remove();
+  });
+});
+const len = await page.evaluate(() => document.body ? document.body.innerText.length : 0);
+if (len < 50) throw new Error('page not rendered — reload before capturing');
+```
+
+**Check every output file afterwards.** A real capture is rarely under ~50 KB; blanks cluster
+around 20–25 KB and all come out near-identical in size. A blank "before" shot on a client-facing
+case page is worse than shipping no page.
+
 ## Desktop capture
 
 Plain and reliable:
