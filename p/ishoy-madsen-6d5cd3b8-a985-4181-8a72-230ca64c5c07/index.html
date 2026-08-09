@@ -1,0 +1,231 @@
+---
+layout: null
+sitemap: false
+title: "A/S Ishøy & Madsen — sådan kunne jeres nye hjemmeside se ud"
+---
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F2740">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ page.title }}</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230F2740%22/><rect x=%228%22 y=%228%22 width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23B0821F%22/></svg>">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<style>
+  .preview-header{border-bottom:1px solid #EAE4DA;padding:18px 0}
+  .preview-header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .preview-tag{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#8b8577}
+  section:first-of-type{padding-top:clamp(48px,7vw,80px)}
+  .case-head{border-top:none;padding-top:0}
+  section + section .case-head{border-top:1px solid #EAE4DA;padding-top:26px}
+
+  .shot-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:34px}
+  .shot-row figure{margin:0;display:flex;flex-direction:column;gap:9px;flex:1;min-width:220px;max-width:340px}
+  .shot-row figcaption{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .shot-row figcaption.before{color:#9c9484}
+  .shot-row figcaption.after{color:#B0821F}
+  .shot-frame{border-radius:10px;overflow:hidden;background:#fff}
+  .shot-frame.plain{border:1px solid #E2DCD1;box-shadow:0 8px 24px -14px rgba(15,39,64,.22)}
+  .shot-frame.gold{border:1px solid #DCC79A;box-shadow:0 18px 44px -18px rgba(176,130,31,.42)}
+  .shot-frame img{display:block;width:100%;height:auto}
+
+  .iphone-frame{position:relative;width:100%;max-width:260px;margin:0 auto;background:#111;border-radius:44px;padding:12px}
+  .iphone-frame.plain{box-shadow:0 16px 36px -18px rgba(15,39,64,.35)}
+  .iphone-frame.gold{box-shadow:0 20px 44px -18px rgba(176,130,31,.5)}
+  .iphone-frame::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:72px;height:8px;background:#111;border-radius:4px;z-index:2}
+  .iphone-frame .screen{position:relative;aspect-ratio:390/844;border-radius:32px;overflow-y:auto;overflow-x:hidden;background:#fff;-webkit-overflow-scrolling:touch}
+  .iphone-frame .screen img{display:block;width:100%;height:auto}
+  .iphone-frame .screen::-webkit-scrollbar{width:4px}
+  .iphone-frame .screen::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:2px}
+
+  .note-row{display:flex;flex-direction:column;gap:9px;margin:20px 0 0;padding:0;list-style:none}
+  .note-row li{font-size:14.5px;line-height:1.5;color:#4d6274;position:relative;padding-left:16px}
+  .note-row li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#B0821F}
+
+  .measure{margin:22px 0 0;border-collapse:collapse;font-size:14.5px}
+  .measure th,.measure td{text-align:left;padding:9px 22px 9px 0;border-bottom:1px solid #EAE4DA;color:#4d6274}
+  .measure th{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#8b8577}
+  .measure td strong{color:#0F2740}
+</style>
+</head>
+<body>
+
+<header class="preview-header">
+  <div class="wrap">
+    <a href="https://nyfacade.dk" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Nyfacade</span>
+    </a>
+    <span class="preview-tag">Privat preview &middot; ikke indekseret</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="hero-copy" style="max-width:780px">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Til A/S Ishøy &amp; Madsen</div>
+      <h1>Samme indhold. <span class="gold">Nyt design.</span></h1>
+      <p class="lede">Jeg har taget jeres tre vigtigste sider — Forside, Om os og Kontakt — og bygget dem om. Samme tekst, samme adresse på Gammel Hareskovvej, samme direkte numre, jeres egne billeder. Kun det visuelle er nyt.</p>
+      <p class="lede">Én ting har jeg taget udgangspunkt i: jeres logo. To trekanter, der møder hinanden om et punkt — det er notationen for et understøtningspunkt i en statisk beregning. Det er jeres eget fag tegnet ind i mærket, så det har jeg brugt som gennemgående motiv i hele designet.</p>
+    </div>
+  </section>
+
+  <section id="forside">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 1 af 3</div>
+        <h2>Forside</h2>
+        <p>Jeres forside er ikke gammeldags — den er velfungerende og har rigtige billeder af rigtige mennesker. Det, den gør, er at være tung: siden henter cirka 27 MB, og alene baggrundsbilledet øverst fylder 7,3 MB, fordi det leveres i fuld størrelse til både computer og telefon. Der findes ingen mindre udgave af filen. Det er hele forklaringen på de 3,6 sekunders indlæsning.</p>
+        <ul class="note-row">
+          <li>De otte fagområder står som en nummereret liste — 01 til 08 — i stedet for otte ens felter</li>
+          <li>„Rådgivende siden 1931“ og F.R.I.-medlemskabet står som fakta øverst, ikke inde i brødteksten</li>
+          <li>Samme billeder, men skaleret rigtigt: fra 27 MB til under 1 MB</li>
+          <li>Den samme sætning står tre gange på forsiden i dag. Nu står den én gang.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; som den er i dag</span></figcaption>
+        <div class="shot-frame plain"><img src="{{ '/assets/img/ishoy-madsen/before-forside-desktop.jpg' | relative_url }}" alt="Ishøy og Madsens forside i dag" loading="lazy"></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="shot-frame gold"><img src="{{ '/assets/img/ishoy-madsen/after-forside-desktop.jpg' | relative_url }}" alt="Forsiden i det nye design" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="om-os">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 2 af 3</div>
+        <h2>Om os</h2>
+        <p>Teksten er den samme — historien siden 1931, F.R.I., de certificerede energikonsulenter, de fire grunde. Det, jeg har lavet om, er medarbejderoversigten. I dag fylder hver person 692 pixels, så „Mød holdet“ er næsten 5.000 pixels at scrolle igennem. Det er ærgerligt, for det er den bedste side I har: otte mennesker med hvert sit direkte nummer.</p>
+        <ul class="note-row">
+          <li>Alle otte står nu på under én skærm — med foto, fagområde og direkte nummer</li>
+          <li>Hver person har fået et fagområde påskrevet, så man kan se hvem man skal ringe til</li>
+          <li>1931, 95 år, otte medarbejdere og otte fagområder står som tal, man kan læse på to sekunder</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; som den er i dag</span></figcaption>
+        <div class="shot-frame plain"><img src="{{ '/assets/img/ishoy-madsen/before-omos-desktop.jpg' | relative_url }}" alt="Ishøy og Madsens Om os-side i dag" loading="lazy"></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="shot-frame gold"><img src="{{ '/assets/img/ishoy-madsen/after-omos-desktop.jpg' | relative_url }}" alt="Om os i det nye design" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 3 af 3</div>
+        <h2>Kontakt</h2>
+        <p>Formularen fungerer, men den spørger ikke om det, I skal bruge for at kunne svare. Derfor har den fået to felter mere: hvilket fagområde opgaven hører under, og hvilken ejendom det drejer sig om. Så kan den rigtige rådgiver tage den med det samme i stedet for at ringe tilbage og spørge.</p>
+        <ul class="note-row">
+          <li>Opgavetype som valgliste med jeres otte fagområder</li>
+          <li>Felt til ejendommens adresse</li>
+          <li>Billedet af jeres eget skilt bliver til sidens hoved</li>
+          <li>„Vi svarer normalt inden for 24 timer“ bliver stående — det er et godt løfte</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; som den er i dag</span></figcaption>
+        <div class="shot-frame plain"><img src="{{ '/assets/img/ishoy-madsen/before-kontakt-desktop.jpg' | relative_url }}" alt="Ishøy og Madsens Kontakt-side i dag" loading="lazy"></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="shot-frame gold"><img src="{{ '/assets/img/ishoy-madsen/after-kontakt-desktop.jpg' | relative_url }}" alt="Kontakt i det nye design" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="mobil">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Det, de fleste ser først</div>
+        <h2>På telefonen kan man ikke zoome ind.</h2>
+        <p>Siden folder pænt sammen på en telefon — den er ikke i stykker. Men der ligger en indstilling i koden, der slår zoom fra: <code>user-scalable=0</code>. Kniber man øjnene sammen over et telefonnummer, kan man ikke forstørre det. Det er én linje at fjerne, og den er væk i det nye.</p>
+        <table class="measure">
+          <tr><th>På forsiden</th><th>I dag</th><th>Efter</th></tr>
+          <tr><td>Hvad siden henter</td><td><strong>ca. 27 MB</strong></td><td><strong>under 1 MB</strong></td></tr>
+          <tr><td>Kan man zoome ind?</td><td><strong>Nej</strong></td><td><strong>Ja</strong></td></tr>
+          <tr><td>„Mød holdet“ på mobil</td><td><strong>ca. 4.850 px</strong></td><td><strong>ca. 600 px</strong></td></tr>
+        </table>
+        <p style="margin-top:18px">Og en detalje mere, som er hurtig at rette: der står „Engeniør“ i listen over brancher på forsiden, og „Vi glæder ost il at høre fra dig“ på kontaktsiden. Nederst står der stadig 2024.</p>
+      </div>
+    </div>
+    <div class="shot-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; Forside</span></figcaption>
+        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/ishoy-madsen/before-forside-mobile.jpg' | relative_url }}" alt="Forsiden i dag, set på mobil" loading="lazy"></div></div>
+      </figure>
+      <figure>
+        <figcaption class="before"><span>Før &middot; Om os</span></figcaption>
+        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/ishoy-madsen/before-omos-mobile.jpg' | relative_url }}" alt="Om os i dag, set på mobil" loading="lazy"></div></div>
+      </figure>
+      <figure>
+        <figcaption class="before"><span>Før &middot; Kontakt</span></figcaption>
+        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/ishoy-madsen/before-kontakt-mobile.jpg' | relative_url }}" alt="Kontakt i dag, set på mobil" loading="lazy"></div></div>
+      </figure>
+    </div>
+    <div class="shot-row" style="margin-top:32px">
+      <figure>
+        <figcaption class="after"><span>Efter &middot; Forside</span></figcaption>
+        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/ishoy-madsen/after-forside-mobile.jpg' | relative_url }}" alt="Forsiden i det nye design, set på mobil" loading="lazy"></div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter &middot; Om os</span></figcaption>
+        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/ishoy-madsen/after-omos-mobile.jpg' | relative_url }}" alt="Om os i det nye design, set på mobil" loading="lazy"></div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter &middot; Kontakt</span></figcaption>
+        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/ishoy-madsen/after-kontakt-mobile.jpg' | relative_url }}" alt="Kontakt i det nye design, set på mobil" loading="lazy"></div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact-card">
+      <div>
+        <div class="contact-tag">Uforpligtende</div>
+        <h2>Kan I bruge den?</h2>
+        <p>Så går vi live: 10.000 kr., 14 dage, lagt ind i jeres nuværende WordPress. Kan I ikke, koster det ingenting — skriv bare nej tak.</p>
+        <p class="contact-signature">Mathias Grundtvig · +45 42 91 58 99 · mathias@nyfacade.dk</p>
+      </div>
+      <div class="contact-form-box" style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+        <a href="mailto:mathias@nyfacade.dk?subject=Ish%C3%B8y%20%26%20Madsen%20%E2%80%94%20ja%20tak" class="btn-cta-block" style="display:block;text-align:center;background:#0F2740;color:#fff;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ja, det vil vi gerne se mere af</a>
+        <a href="tel:+4542915899" style="display:block;text-align:center;border:1px solid #DED7CA;color:#0F2740;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ring i stedet: 42 91 58 99</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="footer-dot"></span>
+      <strong>Nyfacade</strong>
+      <span>· Mathias Grundtvig</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:mathias@nyfacade.dk">mathias@nyfacade.dk</a>
+      <a href="tel:+4542915899">+45 42 91 58 99</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
