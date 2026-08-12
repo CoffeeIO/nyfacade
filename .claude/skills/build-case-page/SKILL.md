@@ -42,6 +42,13 @@ dashed "foto af teamet" gradient div.
    shares the URL directly. Do not ask "should I link it from the homepage" — the answer is
    always no unless explicitly told otherwise.
 
+   **Add `{% include track.html %}` immediately before `</body>`**, after the `main.js` script
+   tag. That include is what reports visits, scroll depth and dwell time for this lead to the
+   Cloudflare Worker in `tracker/`; a page built without it is invisible in `/stats`, and the
+   omission is silent — nothing errors, the data simply never arrives. It writes nothing to the
+   visitor's device (no cookie, no localStorage), so it needs no consent banner; keep it that way
+   if you ever edit it, or the page becomes subject to the Danish cookie rules.
+
    **`sitemap: false` is not optional.** This repo runs `jekyll-sitemap`, which otherwise lists
    every page — so the "private" client link gets published in `sitemap.xml` for anyone to read.
    `noindex` does not save you: it asks crawlers not to *index* the page, while the sitemap is

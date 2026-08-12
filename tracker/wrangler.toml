@@ -1,0 +1,19 @@
+name = "nyfacade-tracker"
+main = "src/worker.js"
+compatibility_date = "2026-08-01"
+
+# Created with:  npx wrangler kv namespace create HITS
+# Paste the returned id below.
+[[kv_namespaces]]
+binding = "HITS"
+id = "e213b857700943d39bccf52c855fc357"
+
+[vars]
+# Optional: a topic name of your choosing at ntfy.sh for phone pushes.
+# Leave empty to disable notifications. Anyone who guesses the topic can read
+# it, so make it long and random.
+NTFY_TOPIC = ""
+
+# Secrets are NOT stored here. Set them once each with:
+#   npx wrangler secret put VISITOR_SALT   (any long random string)
+#   npx wrangler secret put STATS_KEY      (your password for /stats)

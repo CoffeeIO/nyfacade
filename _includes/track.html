@@ -1,0 +1,40 @@
+<!-- Preview-page analytics. Writes nothing to the visitor's device: no cookie,
+     no localStorage, so no consent banner is required. See tracker/src/worker.js -->
+<script>
+(function () {
+  var ENDPOINT = "https://nyfacade-tracker.mathias-b8e.workers.dev/t";
+  var page = location.pathname.replace(/\/$/, "").split("/").pop();
+  var start = Date.now(), maxDepth = 0, closed = false;
+
+  function depth() {
+    var scrollable = document.documentElement.scrollHeight - innerHeight;
+    return scrollable > 0
+      ? Math.min(100, Math.round((scrollY / scrollable) * 100))
+      : 100;
+  }
+
+  function send(event) {
+    var body = JSON.stringify({
+      p: page, e: event, d: maxDepth,
+      s: Math.round((Date.now() - start) / 1000)
+    });
+    // text/plain keeps this a "simple" request, so there is no CORS preflight,
+    // and sendBeacon still delivers it while the tab is closing.
+    navigator.sendBeacon(ENDPOINT, new Blob([body], { type: "text/plain" }));
+  }
+
+  addEventListener("scroll", function () {
+    var d = depth();
+    if (d > maxDepth) maxDepth = d;
+  }, { passive: true });
+
+  send("arrive");
+
+  addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden" && !closed) {
+      closed = true;
+      send("leave");
+    }
+  });
+})();
+</script>
