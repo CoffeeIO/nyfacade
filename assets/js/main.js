@@ -27,9 +27,7 @@
   })();
 
   /* ---------- responsive mockup scaling ---------- */
-  /* each frame (.mockup-frame or .compare) can contain more than one
-     .mockup-scale layer (the hero compare stacks "before" + "after"), so
-     every layer needs its own entry sharing the same frame's measured width */
+  /* one frame can hold several .mockup-scale layers (hero stacks before+after) */
   var scaleTargets = [];
   document.querySelectorAll(".mockup-scale").forEach(function (scaled) {
     var frame = scaled.closest(".mockup-frame") || scaled.closest(".compare");

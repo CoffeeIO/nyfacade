@@ -1,12 +1,4 @@
-/**
- * Preview-page tracker.
- *
- * Stores no cookie and no localStorage value on the visitor's device, so the
- * Danish cookie rules (cookiebekendtgørelsen, implementing ePrivacy art. 5(3))
- * do not apply and no consent banner is needed. Visitors are distinguished by a
- * salted hash of IP + user-agent that rotates every day; the raw IP is never
- * written to storage.
- */
+// Preview-page tracker. No cookie, no localStorage, no raw IP in storage.
 
 const ALLOWED_ORIGIN = "https://nyfacade.dk";
 const RETENTION_DAYS = 90;
@@ -15,7 +7,6 @@ function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
-/** Daily-rotating pseudonymous visitor id. Not reversible, not linkable across days. */
 async function visitorId(request, secret) {
   const material = [
     request.headers.get("cf-connecting-ip") ?? "",
@@ -61,11 +52,10 @@ async function handleBeacon(request, env) {
     { expirationTtl: RETENTION_DAYS * 86400 },
   );
 
-  // Fires once per arrival so you can ring a lead while they are still reading.
   if (event.event === "arrive" && env.NTFY_TOPIC) {
     await fetch(`https://ntfy.sh/${env.NTFY_TOPIC}`, {
       method: "POST",
-      body: `${event.page} — someone just opened the preview (${event.country})`,
+      body: `${event.page}: someone just opened the preview (${event.country})`,
     }).catch(() => {});
   }
 
@@ -82,7 +72,6 @@ async function handleStats(url, env) {
     listed.keys.map((k) => env.HITS.get(k.name, "json")),
   );
 
-  // Roll the raw events up into one line per lead.
   const byPage = new Map();
   for (const r of rows.filter(Boolean)) {
     const agg = byPage.get(r.page) ?? {

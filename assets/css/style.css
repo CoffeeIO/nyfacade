@@ -8,9 +8,7 @@ summary::-webkit-details-marker{display:none}
 details[open] .fq-plus{transform:rotate(45deg)}
 input:focus{outline:2px solid #B0821F;outline-offset:1px}
 
-/* language toggle: Danish shows by default, English is hidden until <html lang="en">
-   (selectors are prefixed with `html` so they always outrank component classes
-   like .case-head/.fit-row that also set `display`, regardless of source order) */
+/* language toggle: html prefix keeps these above the component display rules */
 html [data-en]{display:none}
 html[lang="en"] [data-en]{display:revert}
 html[lang="en"] [data-da]{display:none}
