@@ -1,6 +1,31 @@
 <script>
 (function () {
   var ENDPOINT = "https://nyfacade-tracker.mathias-b8e.workers.dev/t";
+  var SELF_KEY = "nf_self";
+
+  // Own-visit exclusion. Open any preview once with #me and this browser stops
+  // sending beacons on every nyfacade.dk preview from then on; #notme undoes it.
+  // The flag lives in localStorage on YOUR device — nothing is sent, so there is
+  // nothing to filter server-side. Set it once per browser you QA from.
+  function isSelf() {
+    var hash = location.hash;
+    try {
+      if (hash === "#notme") {
+        localStorage.removeItem(SELF_KEY);
+        return false;
+      }
+      if (hash === "#me") {
+        localStorage.setItem(SELF_KEY, "1");
+        return true;
+      }
+      return localStorage.getItem(SELF_KEY) === "1";
+    } catch (e) {
+      return hash === "#me"; // private window, storage blocked
+    }
+  }
+
+  if (isSelf()) return;
+
   var page = location.pathname.replace(/\/$/, "").split("/").pop();
   var start = Date.now(), maxDepth = 0, closed = false;
 

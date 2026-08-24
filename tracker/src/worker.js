@@ -95,6 +95,27 @@ async function handleStats(url, env) {
   });
 }
 
+async function handleEvents(url, env) {
+  if (url.searchParams.get("key") !== env.STATS_KEY) {
+    return new Response("nope", { status: 401 });
+  }
+
+  const page = url.searchParams.get("page");
+  const listed = await env.HITS.list({ limit: 1000 });
+  const rows = await Promise.all(
+    listed.keys.map((k) => env.HITS.get(k.name, "json")),
+  );
+
+  const events = rows
+    .filter(Boolean)
+    .filter((r) => !page || r.page === page)
+    .sort((a, b) => b.ts.localeCompare(a.ts));
+
+  return Response.json(events, {
+    headers: { "cache-control": "no-store" },
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -104,6 +125,9 @@ export default {
     }
     if (url.pathname === "/stats") {
       return handleStats(url, env);
+    }
+    if (url.pathname === "/events") {
+      return handleEvents(url, env);
     }
     return new Response(null, { status: 404 });
   },
