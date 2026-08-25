@@ -177,7 +177,7 @@ h2{margin:0;font-size:clamp(27px,4.2vw,42px);line-height:1.1;font-weight:600;let
 /* footer */
 .site-footer{border-top:1px solid #EAE4DA;background:#FDFCFA}
 .site-footer .wrap{padding:26px clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;font-size:13px;color:#8b8577}
-.footer-brand{display:flex;align-items:center;gap:9px}
+.footer-brand{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
 .footer-dot{width:9px;height:9px;background:#B0821F;border-radius:2px;display:block}
 .footer-brand strong{font-weight:600;color:#0F2740}
 .footer-links{display:flex;gap:18px}
