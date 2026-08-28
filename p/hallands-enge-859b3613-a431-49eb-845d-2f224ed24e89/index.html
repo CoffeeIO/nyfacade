@@ -53,6 +53,10 @@ title: "Hallands Enge: sådan kunne foreningens hjemmeside se ud"
   .steps li{position:relative;padding-left:34px;font-size:15.5px;line-height:1.55;color:#B6C6D4}
   .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:rgba(224,181,88,.16);color:#E0B558;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
   .steps strong{color:#fff;font-weight:600}
+
+  /* Uden CTA-kolonnen efterlader auto-fit en tom kolonne plus gap. */
+  .contact-card{grid-template-columns:1fr}
+  .contact-card>div>p,.contact-card .steps{max-width:62ch}
 </style>
 </head>
 <body>
@@ -231,10 +235,6 @@ title: "Hallands Enge: sådan kunne foreningens hjemmeside se ud"
         </ol>
         <p>Det koster ikke noget. Det er min egen forening, så jeg laver det gratis. Regn med 14 dage, fra jeg har adgang og materialet. Det er hele sitet, ikke kun de tre sider her, og én runde rettelser. Vil I hellere lade være, er det også helt fint: skriv bare nej tak.</p>
         <p class="contact-signature">Mathias Grundtvig · +45 42 91 58 99 · mathias@nyfacade.dk</p>
-      </div>
-      <div class="contact-form-box" style="display:flex;flex-direction:column;justify-content:center;gap:14px">
-        <a href="mailto:mathias@nyfacade.dk?subject=Hallands%20Enge%3A%20ja%20tak" class="btn-cta-block" style="display:block;text-align:center;background:#0F2740;color:#fff;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ja, lad os tage næste skridt</a>
-        <a href="tel:+4542915899" style="display:block;text-align:center;border:1px solid #DED7CA;color:#0F2740;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ring i stedet: 42 91 58 99</a>
       </div>
     </div>
   </section>
