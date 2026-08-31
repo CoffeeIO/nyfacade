@@ -49,14 +49,8 @@ title: "Hallands Enge: sådan kunne foreningens hjemmeside se ud"
   .measure th{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#8b8577}
   .measure td strong{color:#0F2740}
 
-  .steps{margin:18px 0 0;padding:0;list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:13px;max-width:400px}
-  .steps li{position:relative;padding-left:34px;font-size:15.5px;line-height:1.55;color:#B6C6D4}
-  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:rgba(224,181,88,.16);color:#E0B558;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
-  .steps strong{color:#fff;font-weight:600}
-
-  /* Uden CTA-kolonnen efterlader auto-fit en tom kolonne plus gap. */
-  .contact-card{grid-template-columns:1fr}
-  .contact-card>div>p,.contact-card .steps{max-width:62ch}
+  /* Sidste sektion sluttede før i kontaktkortet, som bar luften ned mod foden. */
+  main{padding-bottom:clamp(56px,8vw,96px)}
 </style>
 </head>
 <body>
@@ -218,23 +212,6 @@ title: "Hallands Enge: sådan kunne foreningens hjemmeside se ud"
           <li>Den lyseblå farve og skruenøgle-ikonerne udgår. De kommer fra den skabelon, siden er bygget på: forsidens kildekode indeholder stadig et stykke af en anden forenings side, med titlen „Gislinge Antenneforening“. Det gør ingen skade, men det er heller ikke jeres</li>
           <li>Foreningen har ikke en logofil, så navnet er sat som skrift. Har I noget liggende, bruger jeg det i stedet</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="contact-card">
-      <div>
-        <div class="contact-tag">Uforpligtende</div>
-        <h2>Kan I bruge den?</h2>
-        <p>Så er det her stadig kun et forslag. Der er ikke rørt ved noget hos jer. Herfra går det sådan:</p>
-        <ol class="steps">
-          <li><strong>Adgang.</strong> Vi laver en databehandleraftale, og så får jeg adgang: jeres indhold og login til sitet, tekst og billeder.</li>
-          <li><strong>Testadresse.</strong> Jeg bygger det færdige site på en lukket adresse, hvor I kan se det og bede om rettelser. Jeres nuværende side kører uberørt videre imens.</li>
-          <li><strong>Live.</strong> Når I siger god for det, skifter vi over. Samme domæne, samme mailadresse.</li>
-        </ol>
-        <p>Det koster ikke noget. Det er min egen forening, så jeg laver det gratis. Regn med 14 dage, fra jeg har adgang og materialet. Det er hele sitet, ikke kun de tre sider her, og én runde rettelser. Vil I hellere lade være, er det også helt fint: skriv bare nej tak.</p>
-        <p class="contact-signature">Mathias Grundtvig · +45 42 91 58 99 · mathias@nyfacade.dk</p>
       </div>
     </div>
   </section>
