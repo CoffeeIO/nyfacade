@@ -157,6 +157,10 @@ h2{margin:0;font-size:clamp(27px,4.2vw,42px);line-height:1.1;font-weight:600;let
 .contact-card h2{margin:14px 0 0;font-size:clamp(27px,4vw,40px)}
 .contact-card>div>p{margin:15px 0 0;font-size:16px;line-height:1.6;color:#B6C6D4;max-width:400px;text-wrap:pretty}
 .contact-signature{margin:20px 0 0;font-size:14px;color:#8FA4B6}
+.contact-signature:has(.signature-photo){display:flex;align-items:center;gap:14px;margin-top:24px}
+.signature-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.18);flex:none}
+.contact-signature p{margin:0;line-height:1.5}
+.contact-signature strong{color:#fff;font-weight:600}
 .contact-form-box{background:#fff;border-radius:14px;padding:clamp(22px,3vw,30px)}
 .contact-form{display:flex;flex-direction:column;gap:14px}
 .contact-form label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:500;color:#0F2740}
