@@ -1,0 +1,188 @@
+---
+layout: null
+sitemap: false
+title: "ReviØst: sådan kunne jeres nye hjemmeside se ud"
+---
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F2740">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ page.title }}</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230F2740%22/><rect x=%228%22 y=%228%22 width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%23B0821F%22/></svg>">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<style>
+  .preview-header{border-bottom:1px solid #EAE4DA;padding:18px 0}
+  .preview-header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .preview-tag{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#8b8577}
+  section:first-of-type{padding-top:clamp(48px,7vw,80px)}
+  .case-head{border-top:none;padding-top:0}
+  section + section .case-head{border-top:1px solid #EAE4DA;padding-top:26px}
+
+  .shot-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:34px}
+  .shot-row figure{margin:0;display:flex;flex-direction:column;gap:9px;flex:1;min-width:220px;max-width:340px}
+  .shot-row figcaption{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .shot-row figcaption.before{color:#9c9484}
+  .shot-row figcaption.after{color:#B0821F}
+  .shot-frame{border-radius:10px;overflow:hidden;background:#fff}
+  .shot-frame.plain{border:1px solid #E2DCD1;box-shadow:0 8px 24px -14px rgba(15,39,64,.22)}
+  .shot-frame.gold{border:1px solid #DCC79A;box-shadow:0 18px 44px -18px rgba(176,130,31,.42)}
+  .shot-frame img{display:block;width:100%;height:auto}
+
+  .iphone-frame{position:relative;width:100%;max-width:260px;margin:0 auto;background:#111;border-radius:44px;padding:12px}
+  .iphone-frame.plain{box-shadow:0 16px 36px -18px rgba(15,39,64,.35)}
+  .iphone-frame.gold{box-shadow:0 20px 44px -18px rgba(176,130,31,.5)}
+  .iphone-frame::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:72px;height:8px;background:#111;border-radius:4px;z-index:2}
+  .iphone-frame .screen{position:relative;aspect-ratio:390/844;border-radius:32px;overflow-y:auto;overflow-x:hidden;background:#fff;-webkit-overflow-scrolling:touch}
+  .iphone-frame .screen img{display:block;width:100%;height:auto}
+  .iphone-frame .screen::-webkit-scrollbar{width:4px}
+  .iphone-frame .screen::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:2px}
+
+  .note-row{display:flex;flex-direction:column;gap:9px;margin:20px 0 0;padding:0;list-style:none}
+  .note-row li{font-size:14.5px;line-height:1.5;color:#4d6274;position:relative;padding-left:16px}
+  .note-row li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#B0821F}
+</style>
+</head>
+<body>
+
+<header class="preview-header">
+  <div class="wrap">
+    <a href="https://nyfacade.dk" class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Nyfacade</span>
+    </a>
+    <span class="preview-tag">Privat preview &middot; ikke indekseret</span>
+  </div>
+</header>
+
+
+
+<main class="wrap">
+
+  <section>
+    <div class="hero-copy" style="max-width:780px">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Til ReviØst</div>
+      <h1>Samme indhold. <span class="gold">Nyt design.</span></h1>
+      <p class="lede">Jeg har bygget begge jeres sider om: Forsiden og Medarbejdere. Samme to afdelinger, samme fire navne og jeres egne ord, men sat op, så adresser og telefonnumre står i det første skærmbillede og kan trykkes på fra en mobil.</p>
+      <p class="lede">Designet er bygget af jeres eget R-i-Ø-mærke. Indigo og himmelblå er taget derfra, og siden er sat op som en ren regnskabsbog: linjeret papir, adresser og numre i kolonner og en dobbeltstreg under sidste post. Mærket og de to portrætter er jeres egne. Alt herunder er skærmbilleder.</p>
+    </div>
+  </section>
+
+  <section id="forside">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 1 af 2</div>
+        <h2>Forsiden</h2>
+        <p>I dag står adresserne og telefonnumrene kun i en strimmel nederst på siden, og &ldquo;Hos ReviØst hjælper vi dig til overskud&rdquo; er sat med samme skrift som resten af teksten. I forslaget er den sætning overskriften, og begge afdelinger står med adresse og nummer ved siden af den.</p>
+        <ul class="note-row">
+          <li>Ny sektion: Frederikshavn og Østervrå sat op som to poster i en kontobog, med adresse, telefon og mail</li>
+          <li>Teksten om de to afdelinger og teksten om alle brancher har fået hver sin overskrift</li>
+          <li>Alle fire medarbejdere står på forsiden med titel</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; som den er i dag</span></figcaption>
+        <div class="shot-frame plain"><img src="{{ '/assets/img/reviost/before-forside-desktop.jpg' | relative_url }}" alt="ReviØsts forside i dag" loading="lazy"></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="shot-frame gold"><img src="{{ '/assets/img/reviost/after-forside-desktop.jpg' | relative_url }}" alt="Forsiden i det nye design" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="medarbejdere">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">Side 2 af 2</div>
+        <h2>Medarbejdere</h2>
+        <p>I dag står de fire navne i et gitter af små billeder, og Lene og Per har en silhuet med teksten &ldquo;fotografen er på vej&rdquo;. I forslaget er det en liste med navn, titel og direkte mail på hver linje. Jess og Gitte har deres egne fotos, og Lene og Per står uden foto, indtil der er et.</p>
+        <ul class="note-row">
+          <li>Mailadresserne står skrevet ud. I dag skal man klikke på navnet for at finde dem</li>
+          <li>Ny sektion nederst med begge afdelinger og deres telefonnumre</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; som den er i dag</span></figcaption>
+        <div class="shot-frame plain"><img src="{{ '/assets/img/reviost/before-medarbejdere-desktop.jpg' | relative_url }}" alt="ReviØsts medarbejderside i dag" loading="lazy"></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter</span></figcaption>
+        <div class="shot-frame gold"><img src="{{ '/assets/img/reviost/after-medarbejdere-desktop.jpg' | relative_url }}" alt="Medarbejdersiden i det nye design" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="mobil">
+    <div class="case-head">
+      <div class="copy">
+        <div class="eyebrow">På den lille skærm</div>
+        <h2>I dag er teksten 6,4 pixel høj på en iPhone.</h2>
+        <p>Siden mangler den indstilling, der fortæller telefonen, hvor bred skærmen er. Derfor viser en iPhone hele den 980 pixel brede side formindsket til 40&nbsp;%, og brødteksten på 16 pixel ender på 6,4 pixel. Der er 0 tel-links, så hverken 98&nbsp;95&nbsp;10&nbsp;19 eller 98&nbsp;42&nbsp;68&nbsp;39 kan trykkes på. I forslaget er siden bygget til telefonen, og der er en Ring-knap i det første skærmbillede. Her kan I sammenligne begge sider på en iPhone.</p>
+      </div>
+    </div>
+    <div class="shot-row">
+      <figure>
+        <figcaption class="before"><span>Før &middot; Forsiden</span></figcaption>
+        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/reviost/before-forside-mobile.jpg' | relative_url }}" alt="Forsiden i dag, set på mobil" loading="lazy"></div></div>
+      </figure>
+      <figure>
+        <figcaption class="before"><span>Før &middot; Medarbejdere</span></figcaption>
+        <div class="iphone-frame plain"><div class="screen"><img src="{{ '/assets/img/reviost/before-medarbejdere-mobile.jpg' | relative_url }}" alt="Medarbejdere i dag, set på mobil" loading="lazy"></div></div>
+      </figure>
+    </div>
+    <div class="shot-row" style="margin-top:32px">
+      <figure>
+        <figcaption class="after"><span>Efter &middot; Forsiden</span></figcaption>
+        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/reviost/after-forside-mobile.jpg' | relative_url }}" alt="Forsiden i det nye design, set på mobil" loading="lazy"></div></div>
+      </figure>
+      <figure>
+        <figcaption class="after"><span>Efter &middot; Medarbejdere</span></figcaption>
+        <div class="iphone-frame gold"><div class="screen"><img src="{{ '/assets/img/reviost/after-medarbejdere-mobile.jpg' | relative_url }}" alt="Medarbejdere i det nye design, set på mobil" loading="lazy"></div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact-card">
+      <div>
+        <div class="contact-tag">Uforpligtende</div>
+        <h2>Skal jeg gøre det færdigt?</h2>
+        <p>Hvis I kan lide retningen, gør jeg begge sider færdige og lægger dem ind på jeres nuværende webhotel, så alle mailadresser og telefonnumre virker som i dag.</p>
+        <p><strong>5.000 kr. &middot; ca. 14 dage &middot; én runde rettelser</strong></p>
+        <p>I kan svare direkte på min mail eller ringe til mig på 42 91 58 99, hvis I vil høre mere.</p>
+        {% include signature.html %}
+      </div>
+      <div class="contact-form-box" style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+        <a href="mailto:mathias@nyfacade.dk?subject=Revi%C3%98st%3A%20lad%20os%20tage%20en%20snak" class="btn-cta-block" style="display:block;text-align:center;background:#0F2740;color:#fff;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ja, lad os tage en snak</a>
+        <a href="tel:+4542915899" style="display:block;text-align:center;border:1px solid #DED7CA;color:#0F2740;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:500">Ring i stedet: 42 91 58 99</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="footer-dot"></span>
+      <strong>Nyfacade</strong>
+      <span>&middot; Mathias Grundtvig</span>
+      <span>&middot; Grundtvig Digital &middot; CVR 45802248</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:mathias@nyfacade.dk">mathias@nyfacade.dk</a>
+      <a href="tel:+4542915899">+45 42 91 58 99</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+{% include track.html %}
+</body>
+</html>
