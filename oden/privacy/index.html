@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oden Privacy Policy</title>
+<meta name="robots" content="index,follow">
+<style>
+  :root { --bg: #ffffff; --fg: #1b1b1b; --muted: #5c5c5c; --rule: #e3e3e3; --link: #0b57d0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141414; --fg: #ececec; --muted: #a8a8a8; --rule: #2e2e2e; --link: #8ab4f8; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 36px 0 8px; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  .meta { color: var(--muted); margin-bottom: 28px; }
+  a { color: var(--link); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Oden: Offline Voice Typing</h1>
+  <p class="meta">Privacy policy · Last updated 20 October 2026</p>
+
+  <p>Oden turns your speech into text entirely on your phone. It has no account, no
+  ads, no analytics and no server of its own. We do not collect, store or share any
+  personal data.</p>
+
+  <h2>Your voice and your text</h2>
+  <p>Audio is recorded only while you are dictating. It is transcribed on the device by
+  a speech model running locally, and the recording is discarded afterwards. Neither
+  the audio nor the text is ever sent off the phone.</p>
+  <p>Your dictation history is saved in the app's private storage on your phone so you
+  can find earlier transcripts. You can clear it in the app, and it is deleted when you
+  uninstall Oden.</p>
+
+  <h2>Accessibility service</h2>
+  <p>Oden uses Android's accessibility service for one purpose: to show the microphone
+  button when a text field is focused, and to type your dictated text into that field
+  at the cursor. To do that it looks at which field is focused and what that field
+  currently contains, so the new text lands in the right place. This information is used
+  only at that moment, on the device. It is not stored, logged or transmitted. The
+  transcript is also placed on the clipboard so you can paste it if the app you are
+  typing in does not accept inserted text.</p>
+
+  <h2>Internet use</h2>
+  <p>Oden uses the internet only to download the speech recognition models you choose,
+  from Hugging Face (huggingface.co). These are plain file downloads. Oden sends no
+  audio, text, identifiers or usage data with them. Hugging Face, like any web server,
+  receives the technical information needed to deliver a file, such as your IP address;
+  see <a href="https://huggingface.co/privacy">Hugging Face's privacy policy</a>.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Microphone</strong> – to record what you dictate.</li>
+    <li><strong>Notifications and foreground service</strong> – to keep transcription
+    running while you dictate, as Android requires.</li>
+    <li><strong>Accessibility</strong> – to place the text in the field you are typing in,
+    as described above.</li>
+    <li><strong>Internet</strong> – to download speech models.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Oden is not directed at children and collects no data from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version will be posted on this page with a new
+  date.</p>
+
+  <h2>Contact</h2>
+  <p>Grundtvig Digital (CVR 45802248)<br>
+  Skjeberg Alle 15, 2630 Taastrup, Denmark<br>
+  <a href="mailto:mathias@nyfacade.dk">mathias@nyfacade.dk</a></p>
+
+  <footer>Oden is made by Grundtvig Digital.</footer>
+</main>
+</body>
+</html>
